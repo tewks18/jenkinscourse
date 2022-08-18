@@ -1,3 +1,5 @@
+def myTestContainer
+
 node {
    def commit_id
    stage('Preparation') {
@@ -6,7 +8,7 @@ node {
      commit_id = readFile('.git/commit-id').trim()
    }
    stage('test') {
-     def myTestContainer = docker.image('node:4.6')
+     myTestContainer = docker.image('node:4.6')
 //     myTestContainer.pull()
 //     myTestContainer.inside {
 //       sh 'npm install --only=dev'
