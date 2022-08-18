@@ -20,12 +20,12 @@ node {
 //     myTestContainer.inside("--link ${mysql.id}:mysql") { // using linking, mysql will be available at host: mysql, port: 3306
 //          sh 'npm install --only=dev' 
 //          sh 'npm test'                     
-     }                                   
+ //    }                                   
 //     mysql.stop()
    }                                     
    stage('docker build/push') {            
  //    docker.withRegistry('https://index.docker.io/v2/', 'dockerhub') {
  //      def app = docker.build("wardviaene/docker-nodejs-demo:${commit_id}", '.').push()
-     }                                     
+ //    }                                     
    }                                       
 }                                          
