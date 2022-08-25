@@ -22,7 +22,7 @@ node {
 	
 		if( to != null && !to.isEmpty()) {
 			emailext(body: content, mimeType: 'text/html',
-				replayTo: '$DEFAULT_REPLYTO', subject: subject,
+				replyTo: '$DEFAULT_REPLYTO', subject: subject,
 				to: to, attachLog: true )
 		}
 	
