@@ -20,7 +20,7 @@ node {
 		def subject = "${env.JOB_NAME} - Build #${env.BUILD_NUMBER} ${currentBuild.result}"
 		def content = '${JELLY_SCRIPT,template="html"}'
 	
-		if( to !+ null && !to.isEmpty()) {
+		if( to != null && !to.isEmpty()) {
 			mailext(body: content, mimeType: 'text/html',
 				replayTo: '$DEFAULT_REPLYTO', subject: subject,
 				to: to, attachLog: true )
